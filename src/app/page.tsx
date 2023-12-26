@@ -2,9 +2,7 @@
 import styles from './page.module.css';
 import { ReactEventHandler, useState } from 'react';
 import { RecoilRoot, atom, useRecoilState, useRecoilValue } from 'recoil';
-
-// recoil 상태관리
-const countState = atom({ key: 'countRecoil', default: 10 });
+import { countState } from '@/recoil/count/atom';
 
 export default function Home() {
   /* ----- Counter 컴포넌트 내장 데이터를 외부 컴포넌트에 공유할 수 없기 때문에 부모 컴포넌트(Home)에서 값 관리 ----- */
